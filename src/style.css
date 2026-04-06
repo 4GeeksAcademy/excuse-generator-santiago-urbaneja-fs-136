@@ -2,7 +2,10 @@ body {
     background: white;
 }
 
-#excuse {
-    padding-left: 36em;
-    padding-top: 20em;
+#excusa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    padding-top: 9em;
 }

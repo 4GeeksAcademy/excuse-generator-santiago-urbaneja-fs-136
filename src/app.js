@@ -15,7 +15,7 @@ function generarExcusa() { /*Crea la oración juntando los valores de las listas
   return excusa;
 }
 
-window.onload = function () { /* Busca el elemento por su id, en este caso ("excse") y le añade lo que dice la funcion en este caso generarExcusa() */
-  document.getElementById("excuse").innerHTML = generarExcusa();
+window.onload = function () { /* Busca el elemento por su id, en este caso ("excusa") y le añade lo que dice la funcion en este caso generarExcusa() */
+  document.getElementById("excusa").innerHTML = generarExcusa();
 };
 
