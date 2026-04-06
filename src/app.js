@@ -4,18 +4,12 @@ let action = ['ate', 'peed', 'crushed', 'broke'];
 let what = ['my homework', 'my phone', 'the car'];
 let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-function funcionExcusa(lista) { /* Para elegir un elemento al azar de una lista */
-  let numeroDeCaja = Math.floor(Math.random() * lista.length);
-  let hello = lista[numeroDeCaja];
-  return hello;
+function indiceAleatorio(lista) { /* Para elegir un elemento al azar de una lista */
+  return lista[Math.floor(Math.random() * lista.length)];
 }
 
-function generarExcusa() { /*Crea la oración juntando los valores de las listas, en este caso de forma random */
-  let excusa = `${funcionExcusa(who)} ${funcionExcusa(action)} ${funcionExcusa(what)} ${funcionExcusa(when)}`;
-  return excusa;
-}
-
-window.onload = function () { /* Busca el elemento por su id, en este caso ("excusa") y le añade lo que dice la funcion en este caso generarExcusa() */
-  document.getElementById("excusa").innerHTML = generarExcusa();
-};
+document.addEventListener("DOMContentLoaded", () => {
+  let excusa = `${indiceAleatorio(who)} ${indiceAleatorio(action)} ${indiceAleatorio(what)} ${indiceAleatorio(when)}`;
+  document.getElementById("excusa").innerHTML = `<strong>${excusa}</strong>`;
+});
 
